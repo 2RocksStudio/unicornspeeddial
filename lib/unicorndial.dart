@@ -198,7 +198,7 @@ class _UnicornDialer extends State<UnicornDialer>
 
       var childButtonsList = widget.childButtons == null ||
               widget.childButtons!.length == 0
-          ? List<Widget>()
+          ? []
           : List.generate(widget.childButtons!.length, (index) {
               var intervalValue = index == 0
                   ? 0.9
@@ -225,7 +225,8 @@ class _UnicornDialer extends State<UnicornDialer>
                   mini: widget.childButtons![index].currentButton.mini,
                   tooltip: widget.childButtons![index].currentButton.tooltip,
                   key: widget.childButtons![index].currentButton.key,
-                  elevation: widget.childButtons![index].currentButton.elevation,
+                  elevation:
+                      widget.childButtons![index].currentButton.elevation,
                   foregroundColor:
                       widget.childButtons![index].currentButton.foregroundColor,
                   highlightElevation: widget
@@ -258,7 +259,8 @@ class _UnicornDialer extends State<UnicornDialer>
                           : Container(
                               padding:
                                   EdgeInsets.only(right: widget.childPadding),
-                              child: widget.childButtons![index].returnLabel())),
+                              child:
+                                  widget.childButtons![index].returnLabel())),
                   ScaleTransition(
                       scale: CurvedAnimation(
                         parent: this._animationController,
