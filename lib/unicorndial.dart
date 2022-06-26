@@ -198,7 +198,7 @@ class _UnicornDialer extends State<UnicornDialer>
 
       var childButtonsList = widget.childButtons == null ||
               widget.childButtons!.length == 0
-          ? []
+          ? <Widget>[]
           : List.generate(widget.childButtons!.length, (index) {
               var intervalValue = index == 0
                   ? 0.9
