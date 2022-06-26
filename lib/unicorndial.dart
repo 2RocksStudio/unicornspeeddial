@@ -25,7 +25,8 @@ class UnicornButton extends FloatingActionButton {
       this.labelShadowColor,
       this.labelHasShadow = true,
       this.hasLabel = false})
-      : assert(currentButton != null);
+      : assert(true),
+        super(onPressed: currentButton.onPressed);
 
   Widget returnLabel() {
     return Container(
